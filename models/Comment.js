@@ -1,4 +1,4 @@
-const bodyParser = require('body-parser');
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -32,6 +32,7 @@ Comment.init(
         model: 'post',
         key: 'id'
     }
+}
 },
     {
         sequelize,
@@ -39,7 +40,6 @@ Comment.init(
         underscored: true,
         modelName: 'comment'
     }
-}
 );
 
 module.exports = Comment;
